@@ -50,6 +50,7 @@ This endpoint checks the availability of a specific sod variety in a given zipco
 ```json
 {
   "status": "success",
+  "error": null,
   "data": {
     "dates": [
       "2023-04-01",
