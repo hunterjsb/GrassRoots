@@ -19,7 +19,7 @@ This endpoint checks the availability of a specific sod variety in a given zipco
 
 #### Body
 
-- `zip` (string, required): The zipcode to check the availability in.
+- `zip` (integer, required): The zipcode to check the availability in.
 - `variety` (integer, required): The sod variety ID.
 - `quantity` (integer, required): The minimum quantity available.
 
@@ -45,7 +45,7 @@ This endpoint checks the availability of a specific sod variety in a given zipco
 - `error` (string, optional): A descriptive error message if the request failed.
 - `data` (object, optional): Contains the availability data if the request was successful.
   - `dates` (array of strings): An array of available dates in the "yyyy-mm-dd" format.
-  - `message` (string): A message providing additional information about the availability.
+  - `message` (string): A message to display to the user.
 
 ```json
 {
