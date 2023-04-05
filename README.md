@@ -27,7 +27,7 @@ This endpoint checks the availability of a specific sod variety in a given zipco
 
 ```json
 {
-  "zip": "12345",
+  "zip": 12345,
   "variety": 1,
   "quantity": 50
 }
