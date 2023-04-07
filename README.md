@@ -4,33 +4,28 @@
 
 ### Description
 
-This endpoint checks the availability of a specific sod variety in a given zipcode and with a minimum quantity.
+This endpoint checks the availability of specific sod varieties in a given zipcode and with minimum quantities.
 
 ### Request
 
 #### Method
 
-`POST`
+`GET`
 
 #### Headers
 
-- `Content-Type: application/json`
 - `Authorization: Bearer YOUR_API_TOKEN`
 
-#### Body
+#### Query Parameters
 
 - `zip` (integer, required): The zipcode to check the availability in.
-- `variety` (integer, required): The sod variety ID.
 - `quantity` (integer, required): The minimum quantity available.
+- `varieties` (string, required): A comma-separated list of sod variety IDs.
 
 #### Example
 
-```json
-{
-  "zip": 12345,
-  "variety": 1,
-  "quantity": 50
-}
+```bash
+GET /api/availability?zip=12345&quantity=50&varieties=1,2
 ```
 
 ### Response
@@ -43,7 +38,7 @@ This endpoint checks the availability of a specific sod variety in a given zipco
 #### Response JSON
 - `status` (string): The status of the request, either "success" or "error".
 - `error` (string, optional): A descriptive error message if the request failed.
-- `data` (object, optional): Contains the availability data if the request was successful.
+- `data` (array, optional): An array of objects containing the availability data for each request item if the request was successful.
   - `dates` (array of strings): An array of available dates in the "yyyy-mm-dd" format.
   - `message` (string): A message to display to the user.
 
@@ -51,13 +46,23 @@ This endpoint checks the availability of a specific sod variety in a given zipco
 {
   "status": "success",
   "error": null,
-  "data": {
-    "dates": [
-      "2023-04-01",
-      "2023-04-02",
-      "2023-04-03"
-    ],
-    "message": "Sod variety is available on the listed dates."
-  }
+  "data": [
+    {
+      "dates": [
+        "2023-04-01",
+        "2023-04-02",
+        "2023-04-03"
+      ],
+      "message": "Sod variety 1 is available on the listed dates."
+    },
+    {
+      "dates": [
+        "2023-04-04",
+        "2023-04-05",
+        "2023-04-06"
+      ],
+      "message": "Sod variety 2 is available on the listed dates."
+    }
+  ]
 }
-```
+
