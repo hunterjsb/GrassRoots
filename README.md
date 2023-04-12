@@ -10,7 +10,7 @@ This endpoint checks the availability of specific sod varieties in a given zipco
 
 #### Method
 
-`GET`
+`POST`
 
 #### Headers
 
@@ -20,12 +20,30 @@ This endpoint checks the availability of specific sod varieties in a given zipco
 
 - `zip` (integer, required): The zipcode to check the availability in.
 - `quantity` (integer, required): The minimum quantity available.
-- `varieties` (string, required): A comma-separated list of sod variety IDs.
+- `varieties` (array, required): A list of the following:
+  - `sku` (integer, required): the variety's SKU
+  - `quantity` (integer, required): the quantity of that SKU
 
 #### Example
-
 ```bash
-GET /api/availability?zip=12345&quantity=50&varieties=1,2
+POST /api/availability
+```
+
+```json
+{
+  "zip": 12345,
+  "varieties": [
+    {
+      "sku": 1,
+      "quantity": 25
+    },
+    {
+      "sku": 2,
+      "quantity": 30
+    }
+  ]
+}
+
 ```
 
 ### Response
