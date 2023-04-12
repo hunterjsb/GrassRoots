@@ -2,7 +2,7 @@
 # Super-Sod API Documentation
 ## Contents
 - [Making a Request](#Request)
-  - [`Authentication`](#headers)
+  - [`Heaaders`](#headers)
   - [`Payload`](#json-payload)
   - [`Example`](#example)
 - [Response](#commands)
