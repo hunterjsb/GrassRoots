@@ -2,13 +2,14 @@
 # API Documentation ![Python](https://img.shields.io/badge/Version-0.0.1-blue?logo=python&style=flat)
 
 ## Contents
-- [Making a Request](#Request)
+- [`Making a Request`](#Request)
   - [`Heaaders`](#headers)
   - [`Payload`](#json-payload)
   - [`Example`](#example)
-- [Response](#commands)
+- [`Response`](#commands)
   - [`Status Codes`](#status-code)
   - [`Response JSON`](#response-json)
+  - [`Example`](#response-example)
 ***
 
 ## Endpoint: `/api/availability`
@@ -71,6 +72,7 @@ POST /api/availability
   - `dates` (array of strings): An array of available dates in the "yyyy-mm-dd" format.
   - `message` (string): A message to display to the user.
 
+#### Response Example
 ```json
 {
   "status": "success",
