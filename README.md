@@ -57,7 +57,7 @@ POST /api/availability
 }
 
 ```
-
+---
 ### Response
 
 #### Status codes
