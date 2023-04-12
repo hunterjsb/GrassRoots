@@ -4,11 +4,11 @@
 ## Contents
 - [`Making a Request`](#Request)
   - [`Heaaders`](#headers)
-  - [`Payload`](#json-payload)
+  - [`Attributes`](#json-payload)
   - [`Example`](#example)
 - [`Response`](#commands)
   - [`Status Codes`](#status-code)
-  - [`Response JSON`](#response-json)
+  - [`Attributes`](#response-json)
   - [`Example`](#response-example)
 ***
 
