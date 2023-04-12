@@ -1,5 +1,6 @@
 ![y](https://3023500.fs1.hubspotusercontent-na1.net/hub/3023500/hubfs/logos/super-sod-logo.png?width=245&name=super-sod-logo.png)
-# Super-Sod API Documentation
+# API Documentation ![Python](https://img.shields.io/badge/Python-v3.9-blue?logo=python&style=flat)
+
 ## Contents
 - [Making a Request](#Request)
   - [`Heaaders`](#headers)
