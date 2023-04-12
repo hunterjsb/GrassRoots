@@ -3,7 +3,7 @@
 ## Contents
 - [Making a Request](#Request)
   - [`Authentication`](#headers)
-  - [`Parameters`](#query-parameters)
+  - [`Payload`](#json-payload)
   - [`Example`](#example)
 - [Response](#commands)
   - [`Status Codes`](#status-code)
@@ -26,7 +26,7 @@ This endpoint checks the availability of specific sod varieties in a given zipco
 
 - `Authorization: Bearer YOUR_API_TOKEN`
 
-#### Query Parameters
+#### JSON Payload
 
 - `zip` (integer, required): The zipcode to check the availability in.
 - `quantity` (integer, required): The minimum quantity available.
