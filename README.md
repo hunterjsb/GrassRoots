@@ -2,13 +2,13 @@
 # Super-Sod API Documentation
 ## Contents
 - [Making a Request](#Request)
-  - [`auth`](#headers)
-  - [`load`](#query-parameters)
-  - [`example`](#example)
+  - [`Authentication`](#headers)
+  - [`Parameters`](#query-parameters)
+  - [`Example`](#example)
 - [Quickstart](#quickstart)
 - [Response](#commands)
-  - [`auth`](#status-code)
-  - [`load`](#response-json)
+  - [`Status Codes`](#status-code)
+  - [`Response JSON`](#response-json)
 ***
 
 ## Endpoint: `/api/availability`
