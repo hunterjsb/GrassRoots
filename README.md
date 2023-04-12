@@ -31,7 +31,6 @@ This endpoint checks the availability of specific sod varieties in a given zipco
 #### JSON Payload
 
 - `zip` (integer, required): The zipcode to check the availability in.
-- `quantity` (integer, required): The minimum quantity available.
 - `varieties` (array, required): A list of the following:
   - `sku` (integer, required): the variety's SKU
   - `quantity` (integer, required): the quantity of that SKU
