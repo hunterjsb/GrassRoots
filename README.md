@@ -5,7 +5,6 @@
   - [`Authentication`](#headers)
   - [`Parameters`](#query-parameters)
   - [`Example`](#example)
-- [Quickstart](#quickstart)
 - [Response](#commands)
   - [`Status Codes`](#status-code)
   - [`Response JSON`](#response-json)
