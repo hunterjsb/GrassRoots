@@ -1,4 +1,15 @@
-# API Documentation
+![y](https://3023500.fs1.hubspotusercontent-na1.net/hub/3023500/hubfs/logos/super-sod-logo.png?width=245&name=super-sod-logo.png)
+# Super-Sod API Documentation
+## Contents
+- [Making a Request](#Request)
+  - [`auth`](#headers)
+  - [`load`](#query-parameters)
+  - [`example`](#example)
+- [Quickstart](#quickstart)
+- [Response](#commands)
+  - [`auth`](#status-code)
+  - [`load`](#response-json)
+***
 
 ## Endpoint: `/api/availability`
 
