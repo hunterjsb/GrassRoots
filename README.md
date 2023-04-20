@@ -1,5 +1,5 @@
 ![y](https://3023500.fs1.hubspotusercontent-na1.net/hub/3023500/hubfs/logos/super-sod-logo.png?width=245&name=super-sod-logo.png)
-# API Documentation ![Python](https://img.shields.io/badge/Version-0.0.1-blue?logo=python&style=flat)
+# API Documentation ![Python](https://img.shields.io/badge/Version-0.0.3-lightgreen?logo=python&style=flat)
 
 ## Contents
 - [`Making a Request`](#Request)
@@ -30,10 +30,11 @@ This endpoint checks the availability of specific sod varieties in a given zipco
 
 #### JSON Payload
 
-- `zip` (integer, required): The zipcode to check the availability in.
+- `zip` (integer, required): The zipcode to check the availability in. 
 - `varieties` (array, required): A list of the following:
   - `sku` (integer, required): the variety's SKU
   - `quantity` (integer, required): the quantity of that SKU
+- `fulfillmentType` (string, optional): the way in which the order should be fulfilled. If `fulfillmentType` is not provided, it defaults to `"standard`". Possible values are `"standard"`, `"pickup"`, `"beforeNine"`, and `"beforeNoon"`.
 
 #### Example
 ```bash
@@ -43,6 +44,7 @@ POST /api/availability
 ```json
 {
   "zip": 12345,
+  "fulfillmentType": "pickup",
   "varieties": [
     {
       "sku": 1,
