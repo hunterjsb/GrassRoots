@@ -1,5 +1,5 @@
 ![y](https://3023500.fs1.hubspotusercontent-na1.net/hub/3023500/hubfs/logos/super-sod-logo.png?width=245&name=super-sod-logo.png)
-# API Documentation ![Python](https://img.shields.io/badge/Version-0.0.3-lightgreen?logo=python&style=flat)
+# API Documentation ![Python](https://img.shields.io/badge/Version-0.1.0-magenta?logo=python&style=flat)
 
 ## Contents
 - [`Making a Request`](#Request)
@@ -72,29 +72,18 @@ POST /api/availability
 - `data` (array, optional): An array of objects containing the availability data for each request item if the request was successful.
   - `dates` (array of strings): An array of available dates in the "yyyy-mm-dd" format.
   - `message` (string): A message to display to the user.
+  - `exendedCalendar` (boolean): Whether or not the calendar should be extended.
 
 #### Response Example
 ```json
 {
-  "status": "success",
+  "status": "success", 
   "error": null,
-  "data": [
+  "data":
     {
-      "dates": [
-        "2023-04-01",
-        "2023-04-02",
-        "2023-04-03"
-      ],
-      "message": "Sod variety 1 is available on the listed dates."
-    },
-    {
-      "dates": [
-        "2023-04-04",
-        "2023-04-05",
-        "2023-04-06"
-      ],
-      "message": "Sod variety 2 is available on the listed dates."
+      "dates": ["2023-05-03", "2023-05-04", "2023-05-05", "2023-05-06", "2023-05-08", "2023-05-09", "2023-05-10", "2023-05-11"], 
+      "message": "Sod variety is available on thelisted dates.",
+      "extendedCalendar": false
     }
-  ]
 }
 
